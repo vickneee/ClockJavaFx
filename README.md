@@ -34,7 +34,7 @@ This temporarily disables access control so Docker containers can connect.
 
 ### 6. Build Docker Image:
 ```shell
-docker build -t x11-apps . # Use correct name
+docker build -t xclock . # Use correct name
 ```
 
 ### 7. Run:
@@ -42,5 +42,5 @@ docker build -t x11-apps . # Use correct name
 docker run -it --rm \
     -e DISPLAY=host.docker.internal:0 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
-    x11-apps # Use correct name
+    xclock # Use correct name
 ```
