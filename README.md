@@ -44,3 +44,5 @@ docker run -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     x11-apps # Use correct name
 ```
+
+![clock.png](clock.png)
