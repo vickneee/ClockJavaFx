@@ -51,3 +51,27 @@ docker run -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     xclock # Use correct name
 ```
+
+If error use mvn clean:
+
+clean → deletes the target/ folder
+
+```shell
+mvn clean javafx:run
+```
+
+or use:
+
+```sh
+ mvn javafx:run -Drecompile=true
+```
+Skips the clean step → keeps the old target/ folder.
+
+On macOS, JavaFX GUIs are best run locally, not inside Docker.
+
+### Manifest:
+If manifest error check the manifest:
+```shell
+jar xf target/app.jar META-INF/MANIFEST.MF
+cat META-INF/MANIFEST.MF
+```
